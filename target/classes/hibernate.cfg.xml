@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">1309</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+
+        <!--        <mapping resource="book.hbm.xml" />-->
+        <mapping class="uz.jl.hibernate.models.Book"/>
+        <!--        <mapping class="uz.jl.hibernate.models.Car"/>-->
+        <!--        <mapping class="uz.jl.hibernate.models.Engine"/>-->
+        <mapping class="uz.jl.hibernate.models.m2o.Computer"/>
+        <mapping class="uz.jl.hibernate.models.m2o.Item"/>
+        <mapping class="uz.jl.hibernate.models.m2m.Subject"/>
+        <mapping class="uz.jl.hibernate.models.m2m.Student"/>
+
+    </session-factory>
+</hibernate-configuration>

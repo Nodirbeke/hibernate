@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="uz.jl.hibernate.models.Book">
+
+        <id name="id" >
+            <generator class="identity" />
+        </id>
+        <property name="name"/>
+        <property name="author"/>
+
+    </class>
+
+</hibernate-mapping>
